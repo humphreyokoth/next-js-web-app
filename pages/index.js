@@ -1,8 +1,9 @@
 import Head from "next/head";
+// import styles from "../styles/Layout.module.css";
+import ArticleList from "../components/ArticleList";
 
-import styles from "../styles/Layout.module.css";
 
-export default function Home({ articles }) {
+export default function Home({articles}) {
   //  console.log(articles);
   return (
     <div>
@@ -14,9 +15,7 @@ export default function Home({ articles }) {
         />
       </Head>
       <h1>EDU NEXT JS CRUSH COURSE</h1>
-      {articles.map((article) => (
-        <h3>{article.title}</h3>
-      ))}
+      <ArticleList articles={articles} />
     </div>
   );
 }
@@ -29,7 +28,7 @@ export const getStatciProps = async () => {
   const articles = await res.json();
   return {
     props: {
-      articles,
-    },
+      articles
+    }
   };
 };
