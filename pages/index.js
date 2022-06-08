@@ -2,7 +2,8 @@ import Head from 'next/head'
 
 import styles from '../styles/Layout.module.css'
 
-export default function Home() {
+export default function Home({articles}) {
+ 
   return (
     <div>
     <Head>
@@ -12,6 +13,15 @@ export default function Home() {
       </title>
     </Head>
       <h1>EDU NEXT JS CRUSH COURSE</h1>
+
+      {articles.map((article)=><h3>{article.title}</h3>)}
     </div>
   )
+}
+
+
+export const getStatciProps = async () =>{
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6')
+
+  const articles = await res.json()
 }
