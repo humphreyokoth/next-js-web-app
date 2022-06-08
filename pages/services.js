@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-const servcies = () => {
+const services = () => {
   return (
     <div>
     <Head>
@@ -11,4 +11,4 @@ const servcies = () => {
   )
 }
 
-export default servcies
+export default services
