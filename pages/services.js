@@ -1,11 +1,9 @@
-import Head from "next/head"
+import Meta from "../components/Meta";
 
 const services = () => {
   return (
     <div>
-    <Head>
-      <title>Services</title>
-    </Head>
+    <Meta title= "Services"/>
     <h3>Services</h3>
   </div>
   )
