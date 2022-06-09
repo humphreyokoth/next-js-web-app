@@ -14,7 +14,7 @@ const article = ({ article }) => {
       <h1>article{article.title}</h1>
       <p>{article.body}</p>
       <br />
-      <Link href="/">Go back</Link>
+      <Link href="/"><button>Go back</button></Link>
     </>
   );
 };
